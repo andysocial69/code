@@ -1,0 +1,79 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>ARISA/MSHS Warning Monitor Popup</title>
+    <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css">
+    <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/andysocial69/code/main/popup.css">
+    <style>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+        overflow: scroll;
+        min-width: 250px;
+        max-width: 250px;
+        max-height: 250px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        margin-top: 0px;
+      }
+      .btn-bug {
+        -webkit-appearance: button;
+        -moz-appearance: button;
+        appearance: button;
+        text-decoration: none;
+        color: initial;
+      }
+    </style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+    -->
+      <script src="https://raw.githubusercontent.com/andysocial69/code/main/jquery-2.2.3.min.js"></script>
+  </head>
+  <body  style="width:100%; height:100%">
+      <div class="logo">
+        <center>
+          <a href="http://www.arisahealth.org" id="logo"><img src="https://arisahealth.org/images/arisa_logo.png"></a></div>
+        </center><br><br><br>
+      <h4></h4>
+      <div id="version"></div><br />
+      <div id="users"></div>
+    <!--<div id="bug-reporting-notice">
+        To report bugs or other issues, please send an email to: <strong>adavis@mshs.org</strong>
+        <p>
+            To better help determine potential causes for your issues, please include the version number from the "Current Version:" line above.
+            <br>
+            Please click the form link below.
+        </p>
+    </div>-->
+    <div id="alternateSSN">
+      <h5> </h5>
+        <b>First Letter of First Name:&nbsp; </b> <input type="text" id="fname" name="fname1" maxlength="1" size="1" style="border:solid"><br><br>
+        <b>First Letter of Last Name:&nbsp; <b> <input type="text" id="lname" name="lname1" maxlength="1" size="1" style="border:solid"><br><br>
+        <b>DOB MMDDYY:&nbsp; </b> <input type="text" id="dob" name="dob1" maxlength="6" minlength= "6" size="6" style="border:solid"><br>
+        <button id="button">Alternate SS#</button>
+      <p id="p1"></p>
+    </div>
+    <div>
+      <!--  <p>
+            <center><a href="https://docs.google.com/forms/d/e/1FAIpQLSdznrM2MfwJaeZCfiFN49WFyOrYw385om9s8YO829nG__iRtA/viewform" target="_blank" >Submit Form</a></center>
+        </p>-->
+        <p>
+          <center>
+            
+              <br><br>
+          </center>
+        </p>
+    </div>
+    <script src="https://raw.githubusercontent.com/andysocial69/code/main/popup.js"></script>
+  </body>
+</html>
